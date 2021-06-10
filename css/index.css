@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  color: white;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 20vh 1fr 15vh;
+      grid-template-rows: 20vh 1fr 15vh;
+  background-image: url(../img/euro21-bgc.jpeg);
+  background-size: contain;
+  background-position: center;
+}
+
+body header, body main, body footer {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 5% auto;
+  border-bottom: 2px solid green;
+  border-top: 2px solid green;
+}
+
+body header .headerImg, body header .headerContent {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body header .headerImg {
+  width: 40%;
+  background-image: url(../img/euro21-bgc.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+body header .headerContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 5%;
+}
+
+body .hamburgerMenu {
+  position: fixed;
+  background-color: #333;
+}
+
+body main {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 5%;
+  padding-top: 4%;
+}
+
+body main .card {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "left right";
+  grid-gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5%;
+  padding: 2%;
+  border: 2px dotted gold;
+}
+
+body main .card .left {
+  width: 100px;
+  border-right: 1px solid chocolate;
+}
+
+body main .card .left .versus {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-bottom: 1px solid chocolate;
+}
+
+body main .card .left .versus p {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+body main .card .left .res {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+body main .card .left .res .wnk {
+  margin-top: 5%;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+body main .card .left .res .wnk2 {
+  margin-top: 15%;
+  margin-bottom: 8%;
+  font-size: 12px;
+}
+
+body main .card .right {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "info" "typ";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 215px;
+}
+
+body main .card .right .info {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-bottom: 10%;
+  padding: 5%;
+  border-bottom: 1px solid chocolate;
+}
+
+body main .card .right .info .data {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+body main .card .right .typ {
+  padding: 5%;
+  border-top: 1px solid chocolate;
+}
+
+body main .card .right .typ .tCh {
+  margin-bottom: 5%;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+body footer {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5%;
+  border-top: 2px solid green;
+  border-bottom: 2px solid green;
+}
+
+.left {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: left;
+}
+
+.right {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: right;
+}
+
+.headerImg {
+  grid-area: headerImg;
+}
+
+.headerContent {
+  grid-area: headerContent;
+}
+
+.versus {
+  grid-area: versus;
+}
+
+.res {
+  grid-area: res;
+}
+
+.info {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: info;
+}
+
+.typ {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: typ;
+}
+
+/*
+
+*/
+/*# sourceMappingURL=index.css.map */

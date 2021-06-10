@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    color: rgb(255, 255, 255);
+}
+
+body {
+    display: grid;
+    grid-template-rows: 20vh 1fr 15vh;
+    background-image: url(../img/euro21-bgc.jpeg);
+    background-size: contain;
+    background-position: center;
+    header, main, footer {
+        display: grid;
+        justify-content: center;
+        background-color: rgba($color: #000000, $alpha: .85);
+    }
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 5% auto;
+        .headerImg, .headerContent {
+            justify-content: center;
+            // border: 1px solid pink;
+        }
+        .headerImg {
+            width: 40%;
+            background-image: url(../img/euro21-bgc.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+        .headerContent {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 5%;
+        }
+        border-bottom: 2px solid green; border-top: 2px solid green;
+    }
+    .hamburgerMenu {
+        position: fixed;
+        background-color: #333;
+    }
+    main {
+        display: grid;
+        justify-content: center;
+        padding-bottom: 5%; padding-top: 4%;
+        .card {
+            display: grid;
+            grid-template-areas: 
+            "left right"
+            ;
+            grid-gap: 10px;
+            align-items: center;
+            margin-top: 5%;
+            padding: 2%;
+            // width: 325px;
+            border: 2px dotted gold;
+            .left {
+                width: 100px;
+                .versus {
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    p {
+                        font-size: 24px;
+                        font-weight: 600;
+                    }
+                    border-bottom: 1px solid chocolate;
+                }
+                .res {
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    .wnk {
+                        margin-top: 5%; 
+                        font-size: 15px;
+                        font-weight: 600;
+                    }
+                    .wnk2 {
+                        margin-top: 15%; margin-bottom: 8%;
+                        font-size: 12px;
+                    }
+                }
+                border-right: 1px solid chocolate;
+            }
+            .right {
+                display: grid;
+                grid-template-areas: 
+                "info"
+                "typ"
+                ;
+                align-items: center;
+                text-align: center;
+                width: 215px;
+                .info {
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    margin-bottom: 10%;
+                    padding: 5%;
+                    .data {
+                        font-size: 17px;
+                        font-weight: 600;
+                    }
+                    border-bottom: 1px solid chocolate;
+                }
+                .typ {
+                    padding: 5%;
+                    .tCh {
+                        margin-bottom: 5%;
+                        font-size: 15px;
+                        font-weight: 600;
+                    }
+                    border-top: 1px solid chocolate;
+                }
+            }
+        }
+    }
+    footer {
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+        border-top: 2px solid green; border-bottom: 2px solid green;
+    }
+}
+
+// grid area
+.left {grid-area: left;}
+.right {grid-area: right;}
+
+.headerImg {grid-area: headerImg;}
+.headerContent {grid-area: headerContent;}
+
+.versus {grid-area: versus;}
+.res {grid-area: res;}
+.info {grid-area: info;}
+.typ {grid-area: typ;}
+
+
+/*
+
+*/
