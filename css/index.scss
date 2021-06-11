@@ -1,3 +1,5 @@
+/* Background pattern from Toptal Subtle Patterns */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,8 +12,8 @@ html, body {
 
 body {
     display: grid;
-    grid-template-rows: 20vh 1fr 15vh;
-    background-image: url(../img/euro21-bgc.jpeg);
+    grid-template-rows: 20vh 20vh 1fr 15vh;
+    background-image: url(../img/px_by_Gre3g_@2X.png);
     background-size: contain;
     background-position: center;
     header, main, footer {
@@ -23,62 +25,75 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        padding-top: 5% auto;
-        .headerImg, .headerContent {
-            justify-content: center;
-            // border: 1px solid pink;
-        }
-        .headerImg {
-            width: 40%;
-            background-image: url(../img/euro21-bgc.jpeg);
-            background-size: cover;
-            background-position: center;
-        }
-        .headerContent {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            padding: 5%;
-        }
-        border-bottom: 2px solid green; border-top: 2px solid green;
+        background-image: url(../img/logoeurogm.png);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
     }
-    .hamburgerMenu {
-        position: fixed;
-        background-color: #333;
+    .menu {
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+        grid-template-rows: repeat(3, 33%);
+        justify-content: center;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1%;
+            padding: 2%;
+            color: white;
+            text-decoration: none;
+            background-color: rgba($color: #000000, $alpha: .5);
+        }
+        a:hover, .home {
+            background-color: rgba($color: #ca2020, $alpha: .5);
+        }
+        .home:hover {
+            background-color: rgba($color: #000000, $alpha: .5);
+        }
+        background-color: rgba($color: #2b0b0b, $alpha: .9);
     }
     main {
-        display: grid;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         padding-bottom: 5%; padding-top: 4%;
         .card {
-            display: grid;
-            grid-template-areas: 
-            "left right"
-            ;
-            grid-gap: 10px;
+            display: flex;
+            justify-content: center;
             align-items: center;
             margin-top: 5%;
-            padding: 2%;
-            // width: 325px;
-            border: 2px dotted gold;
+            border: 1px solid gold;
             .left {
                 width: 100px;
                 .versus {
-                    display: grid;
+                    display: flex;
+                    flex-direction: column;
                     justify-content: center;
-                    align-items: center;
                     text-align: center;
-                    p {
+                    padding: 15%;
+                    .countryOne {
+                        margin-top: -10%;
+                    }
+                    .countryTwo {
+                        margin-bottom: -10%;
+                    }
+                    .vs {
+                        color: gold;
                         font-size: 24px;
                         font-weight: 600;
+                        margin-top: 10%; margin-bottom: 15%;
                     }
-                    border-bottom: 1px solid chocolate;
+                    border-bottom: 1px solid gold;
                 }
                 .res {
                     display: grid;
                     justify-content: center;
                     align-items: center;
                     text-align: center;
+                    padding: 5%;
+                    margin-top: 20%; margin-bottom: 15%;
                     .wnk {
                         margin-top: 5%; 
                         font-size: 15px;
@@ -89,19 +104,18 @@ body {
                         font-size: 12px;
                     }
                 }
-                border-right: 1px solid chocolate;
+                border-right: 1px solid gold;
             }
             .right {
-                display: grid;
-                grid-template-areas: 
-                "info"
-                "typ"
-                ;
+                display: flex;
+                flex-direction: column;
                 align-items: center;
                 text-align: center;
-                width: 215px;
+                // width: 215px;
                 .info {
-                    display: grid;
+                    border: 1px solid sandybrown;
+                    display: flex;
+                    flex-direction: column;
                     justify-content: center;
                     align-items: center;
                     text-align: center;
@@ -111,16 +125,25 @@ body {
                         font-size: 17px;
                         font-weight: 600;
                     }
-                    border-bottom: 1px solid chocolate;
                 }
                 .typ {
-                    padding: 5%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: stretch;
+                    align-items: center;
+                    text-align: center;
+                    border: 1px solid red;
                     .tCh {
-                        margin-bottom: 5%;
+                        margin-bottom: 15%;
                         font-size: 15px;
                         font-weight: 600;
                     }
-                    border-top: 1px solid chocolate;
+                    .nameScore{
+                        display: flex;
+                        align-items:flex-end;
+                        justify-content: space-between;
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -128,8 +151,8 @@ body {
     footer {
         justify-content: center;
         align-items: center;
+        margin-top: .5%;
         padding: 5%;
-        border-top: 2px solid green; border-bottom: 2px solid green;
     }
 }
 

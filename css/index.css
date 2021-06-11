@@ -1,3 +1,4 @@
+/* Background pattern from Toptal Subtle Patterns */
 * {
   margin: 0;
   padding: 0;
@@ -12,9 +13,9 @@ html, body {
 body {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 20vh 1fr 15vh;
-      grid-template-rows: 20vh 1fr 15vh;
-  background-image: url(../img/euro21-bgc.jpeg);
+  -ms-grid-rows: 20vh 20vh 1fr 15vh;
+      grid-template-rows: 20vh 20vh 1fr 15vh;
+  background-image: url(../img/px_by_Gre3g_@2X.png);
   background-size: contain;
   background-position: center;
 }
@@ -39,25 +40,51 @@ body header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 5% auto;
-  border-bottom: 2px solid green;
-  border-top: 2px solid green;
-}
-
-body header .headerImg, body header .headerContent {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-body header .headerImg {
-  width: 40%;
-  background-image: url(../img/euro21-bgc.jpeg);
-  background-size: cover;
+  background-image: url(../img/logoeurogm.png);
+  background-size: 80%;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
-body header .headerContent {
+body .menu {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (49%)[2];
+      grid-template-columns: repeat(2, 49%);
+  -ms-grid-rows: (33%)[3];
+      grid-template-rows: repeat(3, 33%);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(43, 11, 11, 0.9);
+}
+
+body .menu a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1%;
+  padding: 2%;
+  color: white;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+body .menu a:hover, body .menu .home {
+  background-color: rgba(202, 32, 32, 0.5);
+}
+
+body .menu .home:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+body main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,59 +92,65 @@ body header .headerContent {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: center;
-  padding: 5%;
-}
-
-body .hamburgerMenu {
-  position: fixed;
-  background-color: #333;
-}
-
-body main {
-  display: -ms-grid;
-  display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-bottom: 5%;
   padding-top: 4%;
 }
 
 body main .card {
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "left right";
-  grid-gap: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 5%;
-  padding: 2%;
-  border: 2px dotted gold;
-}
-
-body main .card .left {
-  width: 100px;
-  border-right: 1px solid chocolate;
-}
-
-body main .card .left .versus {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
-  border-bottom: 1px solid chocolate;
+  margin-top: 5%;
+  border: 1px solid gold;
 }
 
-body main .card .left .versus p {
+body main .card .left {
+  width: 100px;
+  border-right: 1px solid gold;
+}
+
+body main .card .left .versus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 15%;
+  border-bottom: 1px solid gold;
+}
+
+body main .card .left .versus .countryOne {
+  margin-top: -10%;
+}
+
+body main .card .left .versus .countryTwo {
+  margin-bottom: -10%;
+}
+
+body main .card .left .versus .vs {
+  color: gold;
   font-size: 24px;
   font-weight: 600;
+  margin-top: 10%;
+  margin-bottom: 15%;
 }
 
 body main .card .left .res {
@@ -130,6 +163,9 @@ body main .card .left .res {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  padding: 5%;
+  margin-top: 20%;
+  margin-bottom: 15%;
 }
 
 body main .card .left .res .wnk {
@@ -145,19 +181,28 @@ body main .card .left .res .wnk2 {
 }
 
 body main .card .right {
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "info" "typ";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  width: 215px;
 }
 
 body main .card .right .info {
-  display: -ms-grid;
-  display: grid;
+  border: 1px solid sandybrown;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -167,7 +212,6 @@ body main .card .right .info {
   text-align: center;
   margin-bottom: 10%;
   padding: 5%;
-  border-bottom: 1px solid chocolate;
 }
 
 body main .card .right .info .data {
@@ -176,14 +220,40 @@ body main .card .right .info .data {
 }
 
 body main .card .right .typ {
-  padding: 5%;
-  border-top: 1px solid chocolate;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border: 1px solid red;
 }
 
 body main .card .right .typ .tCh {
-  margin-bottom: 5%;
+  margin-bottom: 15%;
   font-size: 15px;
   font-weight: 600;
+}
+
+body main .card .right .typ .nameScore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
 }
 
 body footer {
@@ -193,20 +263,15 @@ body footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: .5%;
   padding: 5%;
-  border-top: 2px solid green;
-  border-bottom: 2px solid green;
 }
 
 .left {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: left;
 }
 
 .right {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
   grid-area: right;
 }
 
@@ -227,14 +292,10 @@ body footer {
 }
 
 .info {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: info;
 }
 
 .typ {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: typ;
 }
 

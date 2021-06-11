@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,mBAAI",
+    "sources": [
+        "euro.scss"
+    ],
+    "names": [],
+    "file": "euro.css"
+}
