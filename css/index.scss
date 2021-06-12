@@ -1,4 +1,4 @@
-/* Background pattern from Toptal Subtle Patterns */
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;800&display=swap');
 
 * {
     margin: 0;
@@ -7,168 +7,49 @@
 }
 
 html, body {
-    color: rgb(255, 255, 255);
+    font-family: 'Darker Grotesque', sans-serif;
 }
 
 body {
-    display: grid;
-    grid-template-rows: 20vh 20vh 1fr 15vh;
-    background-image: url(../img/px_by_Gre3g_@2X.png);
-    background-size: contain;
-    background-position: center;
-    header, main, footer {
-        display: grid;
-        justify-content: center;
-        background-color: rgba($color: #000000, $alpha: .85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    background-color: #04c2e4;
+    .indexImg {
+        margin-top: 4vh; margin-bottom: 1.5vh;
+        height: 40vh;
     }
-    header {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        background-image: url(../img/logoeurogm.png);
-        background-size: 80%;
-        background-repeat: no-repeat;
-        background-position: center;
+    .indexH1 {
+        font-size: 42px;
     }
-    .menu {
-        display: grid;
-        grid-template-columns: repeat(2, 49%);
-        grid-template-rows: repeat(3, 33%);
-        justify-content: center;
-        a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 1%;
-            padding: 2%;
-            color: white;
-            text-decoration: none;
-            background-color: rgba($color: #000000, $alpha: .5);
-        }
-        a:hover, .home {
-            background-color: rgba($color: #ca2020, $alpha: .5);
-        }
-        .home:hover {
-            background-color: rgba($color: #000000, $alpha: .5);
-        }
-        background-color: rgba($color: #2b0b0b, $alpha: .9);
+    .indexH2 {
+        margin-top: -2vh;
+        font-size: 38px;
+        margin-bottom: 8vh;
     }
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 5%; padding-top: 4%;
-        .card {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 5%;
-            border: 1px solid gold;
-            .left {
-                width: 100px;
-                .versus {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    text-align: center;
-                    padding: 15%;
-                    .countryOne {
-                        margin-top: -10%;
-                    }
-                    .countryTwo {
-                        margin-bottom: -10%;
-                    }
-                    .vs {
-                        color: gold;
-                        font-size: 24px;
-                        font-weight: 600;
-                        margin-top: 10%; margin-bottom: 15%;
-                    }
-                    border-bottom: 1px solid gold;
-                }
-                .res {
-                    display: grid;
-                    justify-content: center;
-                    align-items: center;
-                    text-align: center;
-                    padding: 5%;
-                    margin-top: 20%; margin-bottom: 15%;
-                    .wnk {
-                        margin-top: 5%; 
-                        font-size: 15px;
-                        font-weight: 600;
-                    }
-                    .wnk2 {
-                        margin-top: 15%; margin-bottom: 8%;
-                        font-size: 12px;
-                    }
-                }
-                border-right: 1px solid gold;
-            }
-            .right {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                // width: 215px;
-                .info {
-                    border: 1px solid sandybrown;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    text-align: center;
-                    margin-bottom: 10%;
-                    padding: 5%;
-                    .data {
-                        font-size: 17px;
-                        font-weight: 600;
-                    }
-                }
-                .typ {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: stretch;
-                    align-items: center;
-                    text-align: center;
-                    border: 1px solid red;
-                    .tCh {
-                        margin-bottom: 15%;
-                        font-size: 15px;
-                        font-weight: 600;
-                    }
-                    .nameScore{
-                        display: flex;
-                        align-items:flex-end;
-                        justify-content: space-between;
-                        width: 100%;
-                    }
-                }
-            }
-        }
+    .indexH3 {
+        color: black;
+        margin-top: -6vh;
+        font-size: 30px;
     }
-    footer {
-        justify-content: center;
-        align-items: center;
-        margin-top: .5%;
-        padding: 5%;
+    .indexP {
+        color: black;
+        margin-top: -2vh; margin-bottom: 4vh;
+        font-size: 26px;
+    }
+    .next {
+        text-decoration: none;
+        color: black;
+        font-size: 32px;
+        font-weight: 700;
+        border: 3px solid gold;
+        border-radius: 50vh;
+        padding: 5vh;
+    }
+    a:hover {
+        color: white;
+        background-color: black;
     }
 }
-
-// grid area
-.left {grid-area: left;}
-.right {grid-area: right;}
-
-.headerImg {grid-area: headerImg;}
-.headerContent {grid-area: headerContent;}
-
-.versus {grid-area: versus;}
-.res {grid-area: res;}
-.info {grid-area: info;}
-.typ {grid-area: typ;}
-
-
-/*
-
-*/

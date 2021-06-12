@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Darker Grotesque', sans-serif;
+  color: white;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 25vh 20vh 1fr 15vh;
+      grid-template-rows: 25vh 20vh 1fr 15vh;
+  background-color: #2eaac0;
+}
+
+body header, body main, body footer {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body header, body footer {
+  background-color: #094fac;
+}
+
+body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url(../img/euro20-header.jpg);
+  background-size: 99%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 2%;
+}
+
+body .menu {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (49%)[2];
+      grid-template-columns: repeat(2, 49%);
+  -ms-grid-rows: (33%)[3];
+      grid-template-rows: repeat(3, 33%);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .menu a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1%;
+  padding: 2%;
+  color: white;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+}
+
+body .menu a:hover, body .menu .home {
+  font-weight: 800;
+  background-color: rgba(202, 32, 32, 0.5);
+}
+
+body .menu .home:hover {
+  font-weight: 400;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #161616;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+body main .date {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  width: 100%;
+  margin: 3% 0;
+}
+
+body main .date p {
+  padding: 2% 0;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 900;
+}
+
+body main .card {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "left" "center" "right";
+  width: 95vw;
+  margin-bottom: 5%;
+}
+
+body main .card .left {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "teamOne leftScore teamTwo";
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #094fac;
+}
+
+body main .card .left .leftScore {
+  color: whitesmoke;
+  text-align: center;
+}
+
+body main .card .left .leftScore .wnk {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+body main .card .left .leftScore .wnk2 {
+  font-size: 16px;
+}
+
+body main .card .center {
+  padding: 2%;
+  text-align: center;
+  background-color: #d6d6d6;
+}
+
+body main .card .center .data {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+body main .card .center .fass {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+body main .card .right {
+  padding: 2% 0;
+  background-color: #e6e6e6;
+}
+
+body main .card .right .typ {
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+}
+
+body main .card .right .post {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "postName postScore";
+  grid-gap: 35%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 2%;
+  font-size: 14px;
+}
+
+body main .card .right .post .postName {
+  text-align: right;
+  font-weight: 500;
+}
+
+body main .card .right .post .postScore {
+  font-weight: 900;
+  text-align: left;
+}
+
+body main .card .right .post .postScore .nWin {
+  border-bottom: 2px dotted green;
+}
+
+body main .card .right .post .postScore .nLos {
+  border-bottom: 2px dotted crimson;
+}
+
+body footer {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: .5%;
+  padding: 5%;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.left {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: left;
+}
+
+.center {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: center;
+}
+
+.right {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: right;
+}
+
+.team1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: teamOne;
+}
+
+.leftScore {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: leftScore;
+}
+
+.team2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: teamTwo;
+}
+
+.postName {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: postName;
+}
+
+.postScore {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: postScore;
+}
+
+.versus {
+  grid-area: versus;
+}
+
+.res {
+  grid-area: res;
+}
+
+.info {
+  grid-area: info;
+}
+
+.typ {
+  grid-area: typ;
+}
+
+/*
+
+*/
+/*# sourceMappingURL=home.css.map */
